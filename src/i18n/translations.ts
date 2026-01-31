@@ -51,6 +51,8 @@ export const translations = {
       rteProduction: "RTE Analyses et données",
       edfFeed: "Flux RSS REMIT EDF",
       blockchainData: "Blockchain.com Charts",
+      github: "Code source sur GitHub",
+      checkData: "Vérifiez les données !",
     },
     languageSwitcher: {
       label: "Langue",
@@ -119,6 +121,8 @@ export const translations = {
       rteProduction: "RTE Analytics & Data",
       edfFeed: "EDF REMIT RSS Feed",
       blockchainData: "Blockchain.com Charts",
+      github: "Source code on GitHub",
+      checkData: "Check the data!",
     },
     languageSwitcher: {
       label: "Language",
