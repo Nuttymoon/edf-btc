@@ -261,8 +261,11 @@ export default function Home() {
               {t.header.liveData}
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-4 bg-gradient-to-r from-white via-amber-100 to-amber-200 bg-clip-text text-transparent">
-            {t.header.title}
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-4">
+            <span className="bg-gradient-to-r from-white via-amber-100 to-amber-200 bg-clip-text text-transparent">
+              {t.header.title}
+            </span>
+            <span className="ml-3">🇫🇷</span>
           </h1>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
             {t.header.subtitle}

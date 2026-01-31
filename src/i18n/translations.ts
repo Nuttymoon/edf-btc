@@ -5,7 +5,7 @@ export const defaultLocale: Locale = "fr";
 export const translations = {
   fr: {
     meta: {
-      title: "EDF + BTC. L'occasion manquée 🥐",
+      title: "EDF + BTC. L'occasion manquée 🇫🇷",
       description:
         "Simulation de ce qu'EDF aurait pu accumuler en Bitcoin depuis juin 2020 en utilisant le surplus d'énergie nucléaire français.",
     },
@@ -75,7 +75,7 @@ export const translations = {
   },
   en: {
     meta: {
-      title: "EDF + BTC. The Missed Opportunity 🥐",
+      title: "EDF + BTC. The Missed Opportunity 🇫🇷",
       description:
         "Simulating what EDF could have accumulated in Bitcoin since June 2020 using France's nuclear energy surplus.",
     },
