@@ -1,0 +1,3 @@
+model,release_year,hash_rate_th,efficiency_j_th,consumption_watts,approx_cost_usd
+Antminer S19 Pro,2020,110,29.5,3250,2630
+Antminer S21,2024,200,17.5,3500,2800
