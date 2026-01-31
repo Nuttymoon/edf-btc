@@ -78,8 +78,8 @@ Simulates a Bitcoin mining operation using France's nuclear energy surplus, foll
 
 The simulation follows this strategy:
 
-1. **June 2020 (Start):** Initial investment of **$10M** in Antminer S19 Pro miners
-2. **July 2020 - December 2021:** Each month, sell **50% of mined BTC** and reinvest in additional S19 Pro miners
+1. **June 2020 (Start):** Initial investment of **$25M** in Antminer S19 Pro miners
+2. **July 2020 - December 2021:** Each month, sell **75% of mined BTC** and reinvest in additional S19 Pro miners
 3. **January 2022 - September 2023:** Continue mining and **accumulate BTC** (no new S19 Pro available)
 4. **October 2023:** Initial investment of **$50M** in Antminer S21 miners (keep S19 Pro running!)
 5. **November 2023 - December 2024:** Sell **50% of mined BTC** and reinvest in additional S21 miners
@@ -94,7 +94,7 @@ The simulation follows this strategy:
 
 #### Key Features
 
-- **50% reinvestment:** Only 50% of newly mined BTC is sold for reinvestment, the rest is accumulated
+- **75%/50% reinvestment:** 75% of newly mined BTC is sold for reinvestment during S19 period, 50% during S21 period
 - **Dual fleet:** S19 Pro miners are kept running alongside newer S21 miners (not retired)
 - **Energy constraint:** Miners can only operate if there's enough surplus nuclear energy. If the fleet requires more energy than the surplus, only a fraction of miners can run.
 
@@ -126,4 +126,3 @@ npm run mining-simulation
 ```
 
 **Note:** Scripts should be run in order, as `mining-simulation.ts` depends on outputs from the other two scripts.
-
