@@ -22,6 +22,7 @@ export const translations = {
     },
     simulation: {
       totalBtc: "Bitcoins qui auraient été accumulés",
+      disclaimer: "* Si EDF avait lancé une activité de minage de Bitcoin à cette échelle début 2020, cela aurait probablement légèrement perturbé le marché. Cette projection ne prend pas en compte cet impact.",
       since: "Juin 2020 → Novembre 2025",
       initialInvestment: "Investissement initial",
       currentValue: "Valeur aujourd'hui",
@@ -33,6 +34,24 @@ export const translations = {
       networkShare: "Part du réseau",
       strategy: "Stratégie simulée",
       strategyDesc: "Réinvestissement de 75% des BTC minés (2020-2021), puis 50% (2023-2024)",
+      strategies: {
+        title: "Résultats selon la stratégie de vente",
+        reserve: {
+          name: "Réserve Bitcoin",
+          description: "Les BTC sont conservés pour constituer une réserve stratégique",
+          label: "Valeur actuelle de la réserve",
+        },
+        optimized: {
+          name: "Vente au sommet",
+          description: "Les BTC sont vendus au plus haut historique ($120k)",
+          label: "Revenu total de la vente",
+        },
+        continuous: {
+          name: "Vente continue",
+          description: "Les BTC non réinvestis sont vendus chaque mois au prix du marché",
+          label: "Revenu total cumulé",
+        },
+      },
     },
     capacity: {
       installed: "Capacité installée",
@@ -92,6 +111,7 @@ export const translations = {
     },
     simulation: {
       totalBtc: "Bitcoins That Could Have Been Accumulated",
+      disclaimer: "* Had EDF entered the Bitcoin mining industry at this scale in early 2020, it would likely have slightly disrupted the market. This projection does not account for that disruption.",
       since: "June 2020 → November 2025",
       initialInvestment: "Initial Investment",
       currentValue: "Value Today",
@@ -103,6 +123,24 @@ export const translations = {
       networkShare: "Network Share",
       strategy: "Simulated Strategy",
       strategyDesc: "Reinvesting 75% of mined BTC (2020-2021), then 50% (2023-2024)",
+      strategies: {
+        title: "Outcomes by Selling Strategy",
+        reserve: {
+          name: "Bitcoin Reserve",
+          description: "BTC are held to build a strategic reserve",
+          label: "Current reserve value",
+        },
+        optimized: {
+          name: "Sell at ATH",
+          description: "All BTC sold at the $120k all-time high",
+          label: "Total sale revenue",
+        },
+        continuous: {
+          name: "Continuous Selling",
+          description: "Remaining BTC sold each month at market price",
+          label: "Total cumulative revenue",
+        },
+      },
     },
     capacity: {
       installed: "Installed Capacity",
