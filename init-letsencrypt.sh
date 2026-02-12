@@ -2,7 +2,12 @@
 set -e
 
 DOMAIN="edf-btc.fr"
-EMAIL="your-email@example.com"  # ← Change this!
+
+read -p "Enter your email address (for Let's Encrypt notifications): " EMAIL
+if [ -z "$EMAIL" ]; then
+    echo "Error: email address is required."
+    exit 1
+fi
 
 echo ">>> Starting NGINX for ACME challenge..."
 

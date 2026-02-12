@@ -42,8 +42,15 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-[#0a0f1a] text-white overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1a] via-[#0d1525] to-[#0f1a2e] pointer-events-none" />
+      {/* Background image */}
+      <div
+        className="fixed inset-0 bg-auto bg-top bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: "url('/nuclear-plants-2.jpeg')" }}
+      />
+      {/* Dark overlay to keep text readable */}
+      <div className="absolute inset-0 bg-[#0a0f1a]/80 pointer-events-none" />
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a] via-transparent to-[#0a0f1a] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/10 via-transparent to-transparent pointer-events-none" />
 
       <main className="relative z-10 container mx-auto px-6 py-16 max-w-5xl">
