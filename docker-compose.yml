@@ -4,6 +4,9 @@ services:
     restart: unless-stopped
     expose:
       - "3000"
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
 
   nginx:
     image: nginx:alpine
