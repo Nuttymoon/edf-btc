@@ -4,7 +4,7 @@ A retrospective simulation exploring what EDF (France's state-owned electric uti
 
 ## 🔗 Live Demo
 
-[Coming soon]
+[edf-btc.fr](https://edf-btc.fr)
 
 ## 💡 Concept
 
@@ -21,13 +21,14 @@ EDF could have accumulated over **90,000 BTC** worth approximately **$9+ billion
 
 ## 🛠 Tech Stack
 
-- **Framework:** Next.js 14 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **Charts:** Recharts
 - **Data:** CSV/JSON processing with PapaParse
 - **Live Pricing:** DefiLlama API (WBTC price)
 - **i18n:** French/English support
+- **Deployment:** Docker + NGINX + Let's Encrypt
 
 ## 📊 Data Sources
 
@@ -38,6 +39,8 @@ EDF could have accumulated over **90,000 BTC** worth approximately **$9+ billion
 
 ## 🚀 Getting Started
 
+### Local Development
+
 ```bash
 # Install dependencies
 npm install
@@ -47,6 +50,27 @@ npm run dev
 
 # Build for production
 npm run build
+```
+
+### Production Deployment (VPS)
+
+The app runs in Docker with NGINX as a reverse proxy and automatic TLS via Let's Encrypt.
+
+```bash
+# 1. Point your domain's A records to your VPS IP
+# 2. Clone the repo on your VPS
+git clone <repo-url> && cd edf-btc
+
+# 3. Run the bootstrap script (prompts for email, obtains TLS cert, starts everything)
+./init-letsencrypt.sh
+```
+
+After that, the site is live at `https://edf-btc.fr`. Certificate renewal is automatic.
+
+To rebuild after code changes:
+
+```bash
+docker compose up -d --build
 ```
 
 ## 📁 Project Structure
@@ -60,6 +84,10 @@ npm run build
 │   │   └── api/           # API routes (BTC price, EDF unavailability)
 │   ├── components/        # React components
 │   └── i18n/              # Translations
+├── nginx/                 # NGINX reverse proxy config
+├── Dockerfile             # Multi-stage Next.js production build
+├── docker-compose.yml     # Orchestrates Next.js + NGINX + Certbot
+└── init-letsencrypt.sh    # One-time TLS certificate bootstrap
 ```
 
 ## 📝 Data Processing
