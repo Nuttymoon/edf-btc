@@ -151,12 +151,14 @@ export function useSimulationData(
         }
 
         // Fetch unavailability data from API
-        const unavailResponse = await fetch("/api/edf-unavailability");
-        if (!unavailResponse.ok) {
-          throw new Error(errorMessages.fetchFailed);
-        }
-        const unavailData = await unavailResponse.json();
-        setUnavailabilityData(unavailData);
+        // Disabled: EDF RSS feed is unreachable from Docker containers on some VPS providers.
+        // To re-enable, uncomment the lines below.
+        // const unavailResponse = await fetch("/api/edf-unavailability");
+        // if (!unavailResponse.ok) {
+        //   throw new Error(errorMessages.fetchFailed);
+        // }
+        // const unavailData = await unavailResponse.json();
+        // setUnavailabilityData(unavailData);
       } catch (err) {
         setError(
           err instanceof Error ? err.message : errorMessages.generic

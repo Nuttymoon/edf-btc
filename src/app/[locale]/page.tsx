@@ -162,7 +162,9 @@ export default function Home() {
               />
             )}
 
-            <NuclearCapacityCards
+            {/* Disabled: real-time unavailability data is not available from Docker on some VPS providers.
+               To re-enable, uncomment the components below and the fetch in useSimulationData.ts. */}
+            {/* <NuclearCapacityCards
               installedCapacity={installedCapacity}
               availableCapacity={availableCapacity}
               availabilityPercentage={availabilityPercentage}
@@ -174,7 +176,7 @@ export default function Home() {
               unavailabilityData={unavailabilityData}
               numberLocale={numberLocale}
               t={t}
-            />
+            /> */}
 
             <PageFooter t={t} />
           </>
