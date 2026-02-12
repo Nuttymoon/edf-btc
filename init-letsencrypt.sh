@@ -36,7 +36,12 @@ cp nginx/nginx.conf.tmp nginx/nginx.conf
 docker compose up -d nginx
 
 echo ">>> Requesting certificate from Let's Encrypt..."
-docker compose run --rm certbot certonly \
+# Use docker run directly to avoid compose entrypoint interference
+COMPOSE_PROJECT=$(basename "$(pwd)" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9_-]//g')
+docker run --rm \
+    -v "${COMPOSE_PROJECT}_certbot-etc:/etc/letsencrypt" \
+    -v "${COMPOSE_PROJECT}_certbot-var:/var/www/certbot" \
+    certbot/certbot certonly \
     --webroot \
     --webroot-path=/var/www/certbot \
     --email "$EMAIL" \
